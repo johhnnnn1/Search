@@ -1,0 +1,7 @@
+{
+    "appsearch":{
+        "base_endpoint":"anime-search-py.ent.eastus2.azure.elastic-cloud.com/api/as/v1",
+        "api_key":"private-d7abmvknbzvp88oxbk4h8bca",
+        "engine_name":"anime"
+    }
+}
