@@ -61,7 +61,13 @@ def search():
     """
     if request.method == 'POST':
         query = request.form['search']
-        data = client.search(engine_name, query, {})
+        genre_filter = request.form.get('genre')
+        
+        filters = {}
+        if genre_filter:
+            filters['genres'] = genre_filter
+        
+        data = client.search(engine_name, query, {'filters': filters})
         return render_template("index.html", data=data)
 
 @app.route("/index")
@@ -76,7 +82,7 @@ def index():
     f = open('data.json',)
     documents = json.load(f)
     data = client.index_documents(engine_name, documents)
-    return render_template("about.html", data=data)
+    return render_template("index.html", data=data)
 
 if __name__ == "__main__":
     app.run(debug=False)
