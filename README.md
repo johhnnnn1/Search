@@ -1,11 +1,11 @@
-Anime Search App
+## Anime Search App
 This is a simple Flask web application for searching and displaying anime information using Elastic App Search. The application allows users to search for anime titles and provides details such as studio, genres, hype, description, title link, and start date.
 
-Getting Started
+## Getting Started
 Follow the instructions below to set up and run the Anime Search App.
 
-Prerequisites
-Python 3.x
+## Prerequisites
+* Python 3.x
 Flask
 Elastic App Search
 Swagger
