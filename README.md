@@ -64,6 +64,17 @@ json
 ## API Documentation
 * Swagger documentation is available at http://localhost:5000/apidocs/ to explore the available endpoints and parameters.
 
+# Anime API
+
+| HTTP Method | Route | Description |
+|-------------|-------|-------------|
+| GET         | `/api/anime` | Get all anime (for admin or future expansion) |
+| POST        | `/api/anime` | Create a new anime |
+| GET         | `/api/anime/{anime_id}` | Get a specific anime by ID, and its associated data |
+| PUT         | `/api/anime/{anime_id}` | Update anime details |
+| DELETE      | `/api/anime/{anime_id}` | Delete an anime |
+
+
 ## Acknowledgments
 * This project uses Flask for the web framework, Elastic App Search for search functionality, and Swagger/Flasgger for API documentation.
 * Feel free to customize and enhance the Anime Search App based on your requirements!
