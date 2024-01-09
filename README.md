@@ -1,17 +1,17 @@
 ## Anime Search App
 This is a simple Flask web application for searching and displaying anime information using Elastic App Search. The application allows users to search for anime titles and provides details such as studio, genres, hype, description, title link, and start date.
 
-## Getting Started
+## 1. Getting Started
 Follow the instructions below to set up and run the Anime Search App.
 
-## Prerequisites
+## 2. Prerequisites
 * Python 3.x
 * Flask
 * Elastic App Search
 * Swagger
 * Flasgger
 
-## Installation
+## 3. Installation
 1. Clone the repository to your local machine:
 
 * git clone https://github.com/your-username/anime-search-app.git
@@ -23,7 +23,7 @@ Follow the instructions below to set up and run the Anime Search App.
 
 * pip install -r requirements.txt
 
-## Configuration
+## 4. Configuration
 1. Create an account on Elastic Cloud if you don't have one.
 
 2. Create an App Search engine on Elastic Cloud and note down the base endpoint, API key, and engine name.
@@ -40,7 +40,7 @@ json
     }
 }code 
 
-## Running the App
+## 5. Running the App
 1. Open a terminal in the project directory.
 
 2. Run the following command to start the Flask app:
@@ -49,22 +49,22 @@ json
 * python main.py
 3. Open your web browser and go to http://localhost:5000 to access the Anime Search App.
 
-## Usage
+## 6. Usage
 * The home page displays a list of anime titles.
 * Use the search bar to enter a query and click the "Search" button to find specific anime titles.
 * The results will be displayed with details such as genres, description, and a link to the MyAnimeList page.
 
-## Indexing Data
+## 7. Indexing Data
 * To index additional anime data, you can use the /index endpoint. Update the data.json file with the desired anime information and run the following command:
 
 
 * curl -X GET http://localhost:5000/index
 * This will index the data into your App Search engine.
 
-## API Documentation
+## 8. API Documentation
 * Swagger documentation is available at http://localhost:5000/apidocs/ to explore the available endpoints and parameters.
 
-# Anime API
+# 10. Anime API
 
 | HTTP Method | Route | Description |
 |-------------|-------|-------------|
@@ -75,7 +75,7 @@ json
 | DELETE      | `/api/anime/{anime_id}` | Delete an anime |
 
 
-## Mappings
+## 11. Mappings
 
 ![Mapping](map.png)
 
