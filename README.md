@@ -75,11 +75,10 @@ json
 | DELETE      | `/api/anime/{anime_id}` | Delete an anime |
 
 
-## Acknowledgments
-* This project uses Flask for the web framework, Elastic App Search for search functionality, and Swagger/Flasgger for API documentation.
-* Feel free to customize and enhance the Anime Search App based on your requirements!
-
-
 ## Mappings
 
 ![Mapping](map.png)
+
+## Acknowledgments
+* This project uses Flask for the web framework, Elastic App Search for search functionality, and Swagger/Flasgger for API documentation.
+* Feel free to customize and enhance the Anime Search App based on your requirements!
