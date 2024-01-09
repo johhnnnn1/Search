@@ -82,4 +82,4 @@ json
 
 ## Mappings
 
-![Mapping](C:\Users\Ionut\OneDrive\Desktop\Search\map.png)
+![Mapping](map.png)
