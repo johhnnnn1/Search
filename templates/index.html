@@ -9,22 +9,35 @@
 </head>
 
 <body>
-    <div style="background-color: #374151; padding: 1rem;">
-        <h2 style="font-size: 3rem; font-weight: lighter; color: white; margin: 0;">Anime Search</h2>
-    </div>
+
     <div style="display: flex; justify-content: center; padding-left: 3rem; margin-left: 6rem;">
-        <form action="/search" method="POST">
+        <form action="{{ url_for('search') }}" method="GET">
             <input type="text" placeholder="Search here..." name="search"
-                style="border: 2px solid #374151; margin-top: 1rem; padding: 0.75rem 1rem;">
+                   style="border: 2px solid #374151; margin-top: 1rem; padding: 0.75rem 1rem;">
+
+            <!-- Updated genre dropdown -->
+            <select name="genre" style="margin-top: 1rem; padding: 0.5rem 1rem;">
+                <option value="" {% if not selected_genre %}selected{% endif %}>All Genres</option>
+                {% for genre in genres %}
+                    <option value="{{ genre }}" {% if selected_genre == genre %}selected{% endif %}>{{ genre }}</option>
+                {% endfor %}
+            </select>
+            <select name="studio" style="margin-top: 1rem; padding: 0.5rem 1rem;">
+                <option value="" {% if not selected_studio %}selected{% endif %}>All Studios</option>
+                {% for studio in studios %}
+                    <option value="{{ studio }}" {% if selected_studio == studio %}selected{% endif %}>{{ studio }}</option>
+                {% endfor %}
+            </select>
             <button style="background-color: #2563EB; font-size: 1.5rem; color: white; padding: 0.5rem 1rem; cursor: pointer;">Search</button>
         </form>
     </div>
+    
 
     <div style="display: flex; justify-content: center; margin-top: 5rem;">
         <div style="display: grid; gap: 1rem; grid-template-columns: repeat(3, 1fr);">
             {% for d in data['results'] %}
             <div style="transition: 0.5s ease; background-color: #9c91f1; transform: translateY(-1px) scale(1.1); color: white; box-shadow: none; border: 2px solid #374151; margin: 0.5rem; padding: 1rem; text-align: left;">
-                <p>{{d.hype.raw}}</p>
+                <p>{{ d.hype.raw }}</p>
                 <p style="margin-top: 0.5rem;">Genres: {{ d.genres.raw }}</p>
                 <p>{{ d.description.raw }}</p>
             </div>
@@ -32,5 +45,4 @@
         </div>
     </div>
 </body>
-
 </html>
